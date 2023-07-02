@@ -1,1 +1,214 @@
+                                               ROCK - PAPER - SCISSOR GAME
 
+import numpy as np
+print('Rock - Paper - Scissor')
+user_choice = input('Enter "Rock" or "Paper" or "Scissor": ')
+computer_choice = np.random.randint(3)
+if(computer_choice == 0):
+computer_choice = 'Rock'
+elif(computer_choice == 1):
+computer_choice = 'Paper'
+else:
+computer_choice = 'Scissor'
+print()
+print(f'User choice = {user_choice}')
+print(f'Computer choice = {computer_choice}')
+if(user_choice == 'Rock' and computer_choice == 'Rock'):
+print('Oops! There is a tie.')
+elif(user_choice == 'Rock' and computer_choice == 'Paper'):
+print('Computer won the match!')
+elif(user_choice == 'Rock' and computer_choice == 'Scissor'):
+print('User won the match!')
+elif(user_choice == 'Paper' and computer_choice == 'Rock'):
+print('User won the match!')
+elif(user_choice == 'Paper' and computer_choice == 'Paper'):
+print('Oops! There is a tie.')
+elif(user_choice == 'Paper' and computer_choice == 'Scissor'):
+print('User won the match!')
+elif(user_choice == 'Scissor' and computer_choice == 'Rock'):
+print('Computer won the match!')
+elif(user_choice == 'Scissor' and computer_choice == 'Paper'):
+print('User won the match!')
+else:
+print('Oops! There is a tie.')
+
+output :  
+        Rock - Paper - Scissor
+        Enter "Rock" or "Paper" or "Scissor": Rock
+        User choice = Rock
+        Computer choice = Rock
+        Oops! There is a tie.
+
+                                     # if user plays another chance
+                                     # let see who win this time
+
+import numpy as np
+print('Rock - Paper - Scissor')
+user_choice = input('Enter "Rock" or "Paper" or "Scissor": ')
+computer_choice = np.random.randint(3)
+if(computer_choice == 0):
+computer_choice = 'Rock'
+elif(computer_choice == 1):
+computer_choice = 'Paper'
+else:
+computer_choice = 'Scissor'
+print()
+print(f'User choice = {user_choice}')
+print(f'Computer choice = {computer_choice}')
+if(user_choice == computer_choice):
+print('Oops! There is a tie.')
+elif(user_choice == 'Rock' and computer_choice == 'Paper'):
+print('Computer won the match!')
+elif(user_choice == 'Rock' and computer_choice == 'Scissor'):
+print('User won the match!')
+elif(user_choice == 'Paper' and computer_choice == 'Rock'):
+print('User won the match!')
+elif(user_choice == 'Paper' and computer_choice == 'Scissor'):
+print('User won the match!')
+elif(user_choice == 'Scissor' and computer_choice == 'Rock'):
+print('Computer won the match!')
+else:
+print('User won the match!')
+
+output : 
+        Rock - Paper - Scissor
+        Enter "Rock" or "Paper" or "Scissor": Rock
+        User choice = Rock
+        Computer choice = Scissor
+        User won the match!
+                                               # Add replay option
+
+playmore = 1
+while(playmore):
+import numpy as np
+print('Rock - Paper - Scissor')
+user_choice = input('Enter "Rock" or "Paper" or "Scissor": ')
+computer_choice = np.random.randint(3)
+if(computer_choice == 0):
+computer_choice = 'Rock'
+elif(computer_choice == 1):
+computer_choice = 'Paper'
+else:
+computer_choice = 'Scissor'
+print()
+print(f'User choice = {user_choice}')
+print(f'Computer choice = {computer_choice}')
+if(user_choice == computer_choice):
+print('Oops! There is a tie.')
+elif(user_choice == 'Rock' and computer_choice == 'Paper'):
+print('Computer won the match!')
+elif(user_choice == 'Rock' and computer_choice == 'Scissor'):
+print('User won the match!')
+elif(user_choice == 'Paper' and computer_choice == 'Rock'):
+print('User won the match!')
+elif(user_choice == 'Paper' and computer_choice == 'Scissor'):
+print('User won the match!')
+elif(user_choice == 'Scissor' and computer_choice == 'Rock'):
+print('Computer won the match!')
+else:
+print('User won the match!')
+print()
+replay_status = input('Do you want to play again? Type "Yes" or "No" - ')
+if(replay_status == 'No'):
+playmore = 0
+                                         # Add game play statistics
+
+playmore = 1
+matches_played = 0
+user_win_count = 0
+computer_win_count = 0
+tie_count = 0
+while(playmore):
+import numpy as np
+print('Rock - Paper - Scissor')
+user_choice = input('Enter "Rock" or "Paper" or "Scissor": ')
+computer_choice = np.random.randint(3)
+if(computer_choice == 0):
+computer_choice = 'Rock'
+elif(computer_choice == 1):
+computer_choice = 'Paper'
+else:
+computer_choice = 'Scissor'
+print()
+print(f'User choice = {user_choice}')
+print(f'Computer choice = {computer_choice}')
+if(user_choice == computer_choice):
+print('Oops! There is a tie.')
+tie_count+=1
+elif(user_choice == 'Rock' and computer_choice == 'Paper'):
+print('Computer won the match!')
+computer_win_count+=1
+elif(user_choice == 'Rock' and computer_choice == 'Scissor'):
+print('User won the match!')
+user_win_count+=1
+elif(user_choice == 'Paper' and computer_choice == 'Rock'):
+print('User won the match!')
+user_win_count+=1
+elif(user_choice == 'Paper' and computer_choice == 'Scissor'):
+print('User won the match!')
+user_win_count+=1
+elif(user_choice == 'Scissor' and computer_choice == 'Rock'):
+print('Computer won the match!')
+computer_win_count+=1
+else:
+print('User won the match!')
+user_win_count+=1
+print()
+matches_played+=1
+replay_status = input('Do you want to play again? Type "Yes" or "No" - ')
+if(replay_status == 'No'):
+playmore = 0
+print()
+print(f'Matches played = {matches_played}')
+print(f'Number of matches won by user = {user_win_count}')
+print(f'Number of matches won by computer = {computer_win_count}')
+print(f'Number of match tie = {tie_count}')
+
+output : 
+        Rock - Paper - Scissor
+        Enter "Rock" or "Paper" or "Scissor": Rock
+        User choice = Rock
+        Computer choice = Rock
+        Oops! There is a tie.
+
+        Do you want to play again? Type "Yes" or "No" - Yes
+        Rock - Paper - Scissor
+        Enter "Rock" or "Paper" or "Scissor": Paper
+        User choice = Paper
+        Computer choice = Paper
+        Oops! There is a tie.
+
+        Do you want to play again? Type "Yes" or "No" - Yes
+        Rock - Paper - Scissor
+        Enter "Rock" or "Paper" or "Scissor": Scissor
+        User choice = Scissor
+        Computer choice = Scissor
+        Oops! There is a tie.
+
+        Do you want to play again? Type "Yes" or "No" - Yes
+        Rock - Paper - Scissor
+        Enter "Rock" or "Paper" or "Scissor": Rock
+        User choice = Rock
+        Computer choice = Scissor
+        User won the match!
+
+        Do you want to play again? Type "Yes" or "No" - Yes
+        Rock - Paper - Scissor
+        Enter "Rock" or "Paper" or "Scissor": Paper
+        User choice = Paper
+        Computer choice = Rock
+        User won the match!
+
+        Do you want to play again? Type "Yes" or "No" - Yes
+        Rock - Paper - Scissor
+        Enter "Rock" or "Paper" or "Scissor": Scissor
+        User choice = Scissor
+        Computer choice = Rock
+        Computer won the match!
+
+        Do you want to play again? Type "Yes" or "No" - No
+
+Matches played = 6
+Number of matches win by user : 2
+Number of matches win by computer : 1
+Number of matches tie : 3
